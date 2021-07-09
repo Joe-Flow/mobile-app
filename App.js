@@ -83,14 +83,17 @@ const App = () => {
       console.log("error raised", error)
     }
   }
-  const showRhymes = () => rhymes.map(rhyme => <Text key={rhyme.word}>{rhyme.word}</Text>)
+  const showRhymes = () => rhymes.map(rhyme => <Text style={{textAlign: 'center'}} key={rhyme.word}>{rhyme.word}</Text>)
 
 
   return (
     <View style={styles.container}>
+      <Text style={{ textAlign: 'center', fontSize: 25, marginBottom: 15}}>
+        FLOW
+      </Text>
       <View>
         <YoutubePlayer
-          height={300}
+          height={250}
           play={playing}
           videoId={"dACGECIf-wI"}
           onChangeState={onStateChange}
@@ -98,15 +101,18 @@ const App = () => {
         <Button title={playing ? "pause" : "play"} onPress={togglePlaying} />
       </View>
       <SafeAreaView>
-        <Text style={styles.headingText}>Speech Recognition</Text>
-        <View style={styles.textInputStyle}>
-          <TextInput
-            value={result}
-            placeholder="your text"
-            style={{ flex: 1 }}
-            onChangeText={text => setResult(text)}
-          />
-          {isLoading ? <ActivityIndicator size="large" color="red" />
+        <Text style={styles.headingText}>Drop some sick beats</Text>
+        {/* <View style={styles.textInputStyle}> */}
+          <TouchableOpacity
+              onPress={startRecording}
+              style={{textAlign: 'center', width: '100%', flex: 1, alignItems: 'center', justifyContent: 'center'}}
+            >
+              <Image
+                source={{ uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/microphone.png' }}
+                style={{ width: 50, height: 50 }}
+              />
+            </TouchableOpacity>
+          {/* {isLoading ? <ActivityIndicator size="large" color="red" />
 
             :
             
@@ -117,10 +123,10 @@ const App = () => {
                 source={{ uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/microphone.png' }}
                 style={{ width: 25, height: 25 }}
               />
-            </TouchableOpacity>}
+            </TouchableOpacity>} */}
 
-        </View>
-        <Text>Word: {rhymeOrigin}</Text>
+        {/* </View> */}
+        <Text style={{fontSize: 25, fontWeight: 'bold', textAlign: 'center', marginTop: 30}}>Word: {rhymeOrigin}</Text>
         <View>{isLoading ? <Text>Loading...</Text> : showRhymes() || ""}</View>
 
         <TouchableOpacity
@@ -143,7 +149,9 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 24
+    padding: 24,
+    backgroundColor: '#CDCDCD',
+    textAlign: 'center'
   },
   headingText: {
     alignSelf: 'center',
@@ -152,17 +160,8 @@ const styles = StyleSheet.create({
     fontSize: 26
   },
   textInputStyle: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    height: 48,
-    borderRadius: 20,
-    paddingHorizontal: 16,
-    shadowOffset: { width: 0, height: 1 },
-    shadowRadius: 2,
-    elevation: 2,
-    shadowOpacity: 0.4
+    textAlign: 'center',
+    width: '100%',
   }
 });
 
