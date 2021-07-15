@@ -252,6 +252,8 @@ PODS:
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
   - React-jsinspector (0.64.2)
+  - react-native-track-player (1.2.7):
+    - React-Core
   - react-native-voice (1.1.9):
     - React
   - react-native-webview (11.6.4):
@@ -363,6 +365,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-track-player (from `../node_modules/react-native-track-player`)
   - "react-native-voice (from `../node_modules/@react-native-community/voice`)"
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -426,6 +429,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-track-player:
+    :path: "../node_modules/react-native-track-player"
   react-native-voice:
     :path: "../node_modules/@react-native-community/voice"
   react-native-webview:
@@ -486,6 +491,7 @@ SPEC CHECKSUMS:
   React-jsi: 67747b9722f6dab2ffe15b011bcf6b3f2c3f1427
   React-jsiexecutor: 80c46bd381fd06e418e0d4f53672dc1d1945c4c3
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
+  react-native-track-player: 878d6c66e4ae3a69f6a534c57c6c34a42e9b033f
   react-native-voice: 0355d771838b00acfb4b112b2c496c2653e2f8c8
   react-native-webview: 4288b81c682bca4dcc9037afb3ee118af2655c03
   React-perflogger: 25373e382fed75ce768a443822f07098a15ab737

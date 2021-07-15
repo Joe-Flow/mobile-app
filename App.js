@@ -3,6 +3,62 @@ import { View, Image, Text, StyleSheet, SafeAreaView, TextInput, TouchableOpacit
 import Voice from '@react-native-community/voice';
 import axios from 'axios'
 import YoutubePlayer from "react-native-youtube-iframe";
+import TrackPlayer from 'react-native-track-player';
+
+const start = async () => {
+  // Set up the player
+  await TrackPlayer.setupPlayer();
+
+  // Add a track to the queue
+  await TrackPlayer.add({
+    id: 'trackId',
+    url: require('./track.mp3'),
+    title: 'Track Title',
+    artist: 'Track Artist',
+    artwork: require('./180.png')
+  });
+
+  // Start playing it
+  await TrackPlayer.play();
+};
+start();
+
+
+// import TrackPlayer, { State } from 'react-native-track-player';
+
+
+
+
+// var track = {
+//   url: require('./bensound-hipjazz.mp3'), // Load media from the network
+//   title: 'Avaritia',
+//   artist: 'deadmau5',
+//   album: 'while(1<2)',
+//   genre: 'Progressive House, Electro House',
+//   date: '2014-05-20T07:00:00+00:00', // RFC 3339
+//   artwork: 'http://example.com/cover.png', // Load artwork from the network
+//   duration: 402 // Duration in seconds
+// };
+
+
+
+
+// const state = await TrackPlayer.getState();
+// if (state === State.Playing) {
+//     console.log('The player is playing');
+// };
+
+// let trackIndex = await TrackPlayer.getCurrentTrack();
+// let trackObject = await TrackPlayer.getTrack(trackIndex);
+// console.log(`Title: ${trackObject.title}`);
+
+// const position = await TrackPlayer.getPosition();
+// const duration = await TrackPlayer.getDuration();
+// console.log(`${duration - position} seconds left.`);
+
+
+// TrackPlayer.play();
+
 
 
 
@@ -83,36 +139,36 @@ const App = () => {
       console.log("error raised", error)
     }
   }
-  const showRhymes = () => rhymes.map(rhyme => <Text style={{textAlign: 'center'}} key={rhyme.word}>{rhyme.word}</Text>)
+  const showRhymes = () => rhymes.map(rhyme => <Text style={{ textAlign: 'center' }} key={rhyme.word}>{rhyme.word}</Text>)
 
 
   return (
     <View style={styles.container}>
-      <Text style={{ textAlign: 'center', fontSize: 25, marginBottom: 15}}>
+      <Text style={{ textAlign: 'center', fontSize: 25, marginBottom: 15 }}>
         FLOW
       </Text>
       <View>
-        <YoutubePlayer
+        {/* <YoutubePlayer
           height={250}
           play={playing}
           videoId={"dACGECIf-wI"}
           onChangeState={onStateChange}
-        />
+        /> */}
         <Button title={playing ? "pause" : "play"} onPress={togglePlaying} />
       </View>
       <SafeAreaView>
         <Text style={styles.headingText}>Drop some sick beats</Text>
         {/* <View style={styles.textInputStyle}> */}
-          <TouchableOpacity
-              onPress={startRecording}
-              style={{textAlign: 'center', width: '100%', flex: 1, alignItems: 'center', justifyContent: 'center'}}
-            >
-              <Image
-                source={{ uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/microphone.png' }}
-                style={{ width: 50, height: 50 }}
-              />
-            </TouchableOpacity>
-          {/* {isLoading ? <ActivityIndicator size="large" color="red" />
+        <TouchableOpacity
+          onPress={startRecording}
+          style={{ textAlign: 'center', width: '100%', flex: 1, alignItems: 'center', justifyContent: 'center' }}
+        >
+          <Image
+            source={{ uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/microphone.png' }}
+            style={{ width: 50, height: 50 }}
+          />
+        </TouchableOpacity>
+        {/* {isLoading ? <ActivityIndicator size="large" color="red" />
 
             :
             
@@ -126,7 +182,7 @@ const App = () => {
             </TouchableOpacity>} */}
 
         {/* </View> */}
-        <Text style={{fontSize: 25, fontWeight: 'bold', textAlign: 'center', marginTop: 30}}>Word: {rhymeOrigin}</Text>
+        <Text style={{ fontSize: 25, fontWeight: 'bold', textAlign: 'center', marginTop: 30 }}>Word: {rhymeOrigin}</Text>
         <View>{isLoading ? <Text>Loading...</Text> : showRhymes() || ""}</View>
 
         <TouchableOpacity
