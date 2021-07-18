@@ -12,6 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		23A6D7C426A4ED7F008FCE93 /* track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 23A6D7C326A4ED7F008FCE93 /* track.mp3 */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B7012D35A677067F8678E4D3 /* libPods-flow-flowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8B821209087CB49C394F1F /* libPods-flow-flowTests.a */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = flow/main.m; sourceTree = "<group>"; };
 		1D96A0E415177B20BCB77599 /* Pods-flow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flow.debug.xcconfig"; path = "Target Support Files/Pods-flow/Pods-flow.debug.xcconfig"; sourceTree = "<group>"; };
 		1F31297E4FD79233BF8FE593 /* Pods-flow-flowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flow-flowTests.debug.xcconfig"; path = "Target Support Files/Pods-flow-flowTests/Pods-flow-flowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23A6D7C326A4ED7F008FCE93 /* track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track.mp3; sourceTree = "<group>"; };
 		6910379B95A71F88B1C21396 /* Pods-flow-flowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flow-flowTests.release.xcconfig"; path = "Target Support Files/Pods-flow-flowTests/Pods-flow-flowTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = flow/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C8B821209087CB49C394F1F /* libPods-flow-flowTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flow-flowTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				23A6D7C326A4ED7F008FCE93 /* track.mp3 */,
 				13B07FAE1A68108700A75B9A /* flow */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* flowTests */,
@@ -242,6 +245,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				23A6D7C426A4ED7F008FCE93 /* track.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

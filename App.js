@@ -2,26 +2,45 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { View, Image, Text, StyleSheet, SafeAreaView, TextInput, TouchableOpacity, ActivityIndicator, Button } from 'react-native';
 import Voice from '@react-native-community/voice';
 import axios from 'axios'
-import YoutubePlayer from "react-native-youtube-iframe";
-import TrackPlayer from 'react-native-track-player';
+// import YoutubePlayer from "react-native-youtube-iframe";
+// import Sound from 'react-native-sound';
 
-const start = async () => {
-  // Set up the player
-  await TrackPlayer.setupPlayer();
 
-  // Add a track to the queue
-  await TrackPlayer.add({
-    id: 'trackId',
-    url: require('./track.mp3'),
-    title: 'Track Title',
-    artist: 'Track Artist',
-    artwork: require('./180.png')
-  });
+import SoundPlayer from 'react-native-sound-player'
+console.log("popping pockets")
+try {
+  // play the file tone.mp3
+  console.log('in here??')
+  SoundPlayer.playSoundFile('track', 'mp3')//.then(res => console.log(res, '??'))
+  // or play from url
+  // SoundPlayer.playUrl('https://example.com/music.mp3')
+} catch (e) {
 
-  // Start playing it
-  await TrackPlayer.play();
-};
-start();
+  console.log(`cannot play the sound file`, e)
+}
+
+
+
+
+// import TrackPlayer from 'react-native-track-player';
+
+// const start = async () => {
+//   // Set up the player
+//   await TrackPlayer.setupPlayer();
+
+//   // Add a track to the queue
+//   await TrackPlayer.add({
+//     id: 'trackId',
+//     url: require('./track.mp3'),
+//     title: 'Track Title',
+//     artist: 'Track Artist',
+//     artwork: require('./180.png')
+//   });
+
+//   // Start playing it
+//   await TrackPlayer.play();
+// };
+// start();
 
 
 // import TrackPlayer, { State } from 'react-native-track-player';
@@ -145,7 +164,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Text style={{ textAlign: 'center', fontSize: 25, marginBottom: 15 }}>
-        FLOW
+        FLOW {new Date().getTime()}
       </Text>
       <View>
         {/* <YoutubePlayer
