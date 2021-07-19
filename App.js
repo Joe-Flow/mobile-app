@@ -1,6 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import codePush from 'react-native-code-push';
+
 import { View, Image, Text, StyleSheet, SafeAreaView, TextInput, TouchableOpacity, ActivityIndicator, Button } from 'react-native';
 import Voice from '@react-native-community/voice';
+
+Voice.onSpeechStart = this.onSpeechStartHandler.bind(this);
+
+
 import axios from 'axios'
 // import YoutubePlayer from "react-native-youtube-iframe";
 // import Sound from 'react-native-sound';
@@ -185,7 +191,8 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App;
+
+export default codePush(App);
 
 
 

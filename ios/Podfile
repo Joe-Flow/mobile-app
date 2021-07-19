@@ -1,6 +1,7 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+
 platform :ios, '10.0'
 
 target 'flow' do
@@ -12,6 +13,8 @@ target 'flow' do
     :hermes_enabled => false
   )
 
+
+  pod 'react-native-voice', :path => '../node_modules/@react-native-community/voice'
 
   target 'flowTests' do
     inherit! :complete

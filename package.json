@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "@react-native-community/voice": "^1.1.9",
+    "appcenter": "4.2.0",
+    "appcenter-analytics": "4.2.0",
+    "appcenter-crashes": "4.2.0",
     "axios": "^0.21.1",
     "react": "17.0.1",
     "react-native": "0.64.2",
+    "react-native-code-push": "^7.0.1",
     "react-native-sound-player": "^0.10.9",
     "react-native-webview": "^11.6.4",
     "react-native-youtube-iframe": "^2.1.0"

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">flow</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">77255045-c760-4934-95ef-33f57237e939</string>
 </resources>
