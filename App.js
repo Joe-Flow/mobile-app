@@ -105,6 +105,7 @@ const App = () => {
   const showRhymes = () => rhymes.map(rhyme => <Text style={{ textAlign: 'center' }} key={rhyme.word}>{rhyme.word}</Text>)
 
 
+
   return (
     <View style={styles.container}>
       <Text style={{ textAlign: 'center', fontSize: 25, marginBottom: 15 }}>
